@@ -1,0 +1,54 @@
+<Application>
+  <Menus>
+    <action type="remove">
+      <Menu UniqueID="OWA_EDU"/>
+    </action>
+  </Menus>
+  <Menus>
+    <action type="add">
+      <Menu Checked="0" Enabled="1" FatherUID="43520" String="Billing Manager" Type="2" UniqueID="OWA_EDU" Image="" position="14">
+        <Menus>
+          <action type="add">
+            <Menu Checked="0"  Enabled="1" FatherUID="OWA_EDU" String="Setup" Type="2" UniqueID="OWA_BILSETUP" Image="">
+              <Menus>
+                <action type="add">
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="Configuration" Type="1" UniqueID="m_config"/>
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="Schools" Type="1" UniqueID="m_school"/>
+
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="Classes" Type="1" UniqueID="m_class"/>
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="School Session" Type="1" UniqueID="m_schoolsess"/>
+
+                  <!--<Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="School Fee Group" Type="1" UniqueID="m_schfeesGroup"/>-->
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="School Fee Schedule" Type="1" UniqueID="m_schfees"/>
+                  <!--<Menu Checked="0" Enabled="1" FatherUID="OWA_BILSETUP" String="Student In Level" Type="1" UniqueID="m_stuInClass"/>-->
+
+                </action>
+              </Menus>
+            </Menu>
+
+            <Menu Checked="0"  Enabled="1" FatherUID="OWA_EDU" String="Business Partner Master" Type="2" UniqueID="OWA_BILLPART" Image="">
+              <Menus>
+                <action type="add">
+                  <!--<Menu Checked="0" Enabled="1" FatherUID="OWA_BILLPART" String="Employee Payroll Data" Type="1" UniqueID="m_emppaydata"/>-->
+                </action>
+              </Menus>
+            </Menu>
+            <!--<Menu Checked="0"  Enabled="1" FatherUID="OWA_PAY" String="Employee Loan Admin" Type="2" UniqueID="OWA_PAYLOAN" Image="">
+              <Menus>
+                <action type="add">
+
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_PAYLOAN" String="Employee Loan" Type="1" UniqueID="m_emploan"/>
+                  <Menu Checked="0" Enabled="1" FatherUID="OWA_PAYLOAN" String="Employee Loan Repayment" Type="1" UniqueID="m_emploanrepay"/>
+                </action>
+              </Menus>
+            </Menu>-->
+            <Menu Checked="0" Enabled="1" FatherUID="OWA_EDU" String="Refund Transaction" Type="1" UniqueID="m_reftrans"/>
+            <Menu Checked="0" Enabled="1" FatherUID="OWA_EDU" String="Billing Process Wizard" Type="1" UniqueID="m_bilwiz"/>
+          </action>
+        </Menus>
+
+      </Menu>
+
+    </action>
+  </Menus>
+</Application>

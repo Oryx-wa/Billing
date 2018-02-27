@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Oryx>
+  <Forms Name="SBOEDUConfiguration" MenuUID="m_config" PermID="OWA_EDU001" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUSchools" MenuUID="m_school" PermID="OWA_EDU001" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUClass" MenuUID="m_class" PermID="OWA_EDU009" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUTerm" MenuUID="m_schoolterm" PermID="OWA_EDU004" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUSession" MenuUID="m_schoolsess" PermID="OWA_EDU004" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUKeyStage" MenuUID="m_Kstage" PermID="OWA_EDU003" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUSibling" MenuUID="m_sibling" PermID="OWA_EDU005" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUBilling" MenuUID="m_billing" PermID="OWA_EDU006" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUBillingWizard" MenuUID="m_bilwiz" PermID="OWA_EDU007" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUSchoolFees" MenuUID="m_schfees" PermID="OWA_EDU008" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUOTPayDiscount" MenuUID="m_otpStud" PermID="OWA_EDU009" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUEmployeeChild" MenuUID="m_empchild" PermID="OWA_PAY010" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUFEEGROUP" MenuUID="m_schfeesGroup" PermID="OWA_PAY011" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDURefundTrans" MenuUID="m_reftrans" PermID="OWA_PAY010" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEDUClass" MenuUID="m_dept" PermID="OWA_PAY010" PermCategory="OWA_PAYDEFINITIONS"/>
+
+  <!--
+  <Forms Name="SBOSalScaleView_b1f" MenuUID="m_reftrans" PermID="OWA_PAY010" PermCategory="OWA_PAYDEFINITIONS"/>
+  <Forms Name="SBOEmpSalView_b1f" MenuUID="m_empsal" PermID="OWA_PAY011" PermCategory="OWA_PAYDATA"/>
+  <Forms Name="SBOEmpTerm_b1f" MenuUID="TerminateEmp" PermID="OWA_PAY012" PermCategory="OWA_PAYTERMINATE"/>
+  <Forms Name="SBOEmpPayData_b1f" MenuUID="m_emppaydata" PermID="OWA_PAY013" PermCategory="OWA_PAYDATA"/>
+  <Forms Name="SBOEmpPRun_b1f" MenuUID="m_emppayrun" PermID="OWA_PAY014" PermCategory="OWA_PAYDATA"/>
+  <Forms Name="SBOEmpTaxReliefView_b1f" MenuUID="m_emptaxrelief" PermID="OWA_PAY015" PermCategory="OWA_PAYDATA"/>
+  <Forms Name="SBOEmpLoanView_b1f" MenuUID="m_emploan" PermID="OWA_PAY016" PermCategory="OWA_PAYLOAN"/>
+  <Forms Name="SBOEmpLoanRepayView_b1f" MenuUID="m_emploanrepay" PermID="OWA_PAY017" PermCategory="OWA_PAYLOAN"/>
+  <Forms Name="SBOEmpSpecSalView_b1f" MenuUID="m_empspecsal" PermID="OWA_PAY018" PermCategory="OWA_PAYDATA"/>
+  <Forms Name="SBOPayProcess_b1f" MenuUID="m_payproc" PermID="OWA_PAY019" PermCategory="OWA_PAYPROCESS"/>
+  <Forms Name="SBOEmpWizard_b1f" MenuUID="m_empwiz" PermID="OWA_PAY020" PermCategory="OWA_PAYDATA"/>
+  <Forms Name="SBOPayProcessWizard_b1f" MenuUID="m_procwiz" PermID="OWA_PAY021" PermCategory="OWA_PAYPROCESS"/>-->
+</Oryx>

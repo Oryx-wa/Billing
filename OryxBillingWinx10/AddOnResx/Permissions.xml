@@ -1,0 +1,11 @@
+<Permissions>
+  <Perm>
+    <PermissionID>OWA_BILLING</PermissionID>
+    <PermName>Oryx School Billing</PermName>
+    <PermType>1</PermType>
+    <PermLevel>1</PermLevel>
+    <FatherID></FatherID>
+    <IsItem>N</IsItem>
+    <Created>N</Created>
+  </Perm>
+  </Permissions>

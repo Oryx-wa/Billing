@@ -1,0 +1,3176 @@
+﻿<Tables>
+  <usertable>
+    <TableName>OCRD</TableName>
+    <TableDescription>OCRD</TableDescription>
+    <Tabletype>0</Tabletype>
+    <Secondary>-1</Secondary>
+    <Created>Y</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>Class</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Class</Description>
+      <EditSize>30</EditSize>
+      <LinkedTable>OWA_EDUCLASS</LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>KeyStage</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Key Stage</Description>
+      <EditSize>30</EditSize>
+      <LinkedTable>U_KEYSTAGE</LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>Year</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Year Of Entry</Description>
+      <EditSize>30</EditSize>
+      <LinkedTable>U_YEAR</LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>DOB</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Date Of Birth</Description>
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>YOE</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Year Of Entry</Description>
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>AdmissionDate</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Date of Admission</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>7</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>Level</Name>
+      <Type>2</Type>
+      <Size>10</Size>
+      <Description>Current Level</Description>
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>0</IndexID>
+        <Value>100</Value>
+        <Description>100 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>1</IndexID>
+        <Value>200</Value>
+        <Description>200 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>2</IndexID>
+        <Value>300</Value>
+        <Description>300 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>3</IndexID>
+        <Value>400</Value>
+        <Description>400 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>4</IndexID>
+        <Value>500</Value>
+        <Description>500 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>5</IndexID>
+        <Value>600</Value>
+        <Description>600 Level</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>8</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>FeeType</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Fee Type</Description>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <DefaultValue>R</DefaultValue>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>8</FieldID>
+        <IndexID>0</IndexID>
+        <Value>R</Value>
+        <Description>Regular</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>8</FieldID>
+        <IndexID>1</IndexID>
+        <Value>F</Value>
+        <Description>Fee Paying</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OCRD</TableName>
+        <FieldID>8</FieldID>
+        <IndexID>2</IndexID>
+        <Value>I</Value>
+        <Description>International</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>9</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>Dim1</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Dimension 1</Description>
+      <EditSize>30</EditSize>
+      <LinkedTable></LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>10</FieldID>
+      <TableName>OCRD</TableName>
+      <Name>Dim2</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Dimension 2</Description>
+      <EditSize>30</EditSize>
+      <LinkedTable></LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OINV</TableName>
+    <TableDescription>OINV</TableDescription>
+    <Tabletype>0</Tabletype>
+    <Secondary>-1</Secondary>
+    <Created>Y</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OINV</TableName>
+      <Name>Batch</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Invoice Batch</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OINV</TableName>
+      <Name>TermType</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Term Type</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OINV</TableName>
+      <Name>RefBatch</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Refund Batch</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>INV1</TableName>
+    <TableDescription>INV1</TableDescription>
+    <Tabletype>0</Tabletype>
+    <Secondary>-1</Secondary>
+    <Created>Y</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>INV1</TableName>
+      <Name>School</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>School</Description>
+      <EditSize>20</EditSize>
+      <LinkedTable></LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>INV1</TableName>
+      <Name>Class</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Class</Description>
+      <EditSize>20</EditSize>
+      <LinkedTable></LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>INV1</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Session</Description>
+      <EditSize>20</EditSize>
+      <LinkedTable></LinkedTable>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OITM</TableName>
+    <TableDescription>OITM</TableDescription>
+    <Tabletype>0</Tabletype>
+    <Secondary>-1</Secondary>
+    <Created>Y</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OITM</TableName>
+      <Name>Dim1</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Dimension One</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OITM</TableName>
+      <Name>Dim2</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Dimension Two</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OITM</TableName>
+      <Name>Dim3</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Dimension Three</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OITM</TableName>
+      <Name>Dim4</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Dimension Four</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OITM</TableName>
+      <Name>Dim5</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Dimension Five</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OITM</TableName>
+      <Name>AcctCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Account Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUBATCHDETAILS</TableName>
+    <TableDescription>School Billing Batch Details</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUBATCHDETAILS</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Student Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUBATCHDETAILS</TableName>
+      <Name>ItemCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Fee Item Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUBATCHDETAILS</TableName>
+      <Name>Amount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description />
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUBATCHDETAILS</TableName>
+      <Name>GLCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>GL Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUBILLDET</TableName>
+    <TableDescription>Billing Fees Details</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>N</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>N</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWABILLDET</Code>
+      <Name>BILLDET</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>ItemCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Fee Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>ItemName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Fee Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>Amount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Amount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>SpecialItem</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Special Item</Description>
+      <DefaultValue>N</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUBILLDET</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>0</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUBILLDET</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>1</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>Development</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Development Levy</Description>
+      <DefaultValue>N</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUBILLDET</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>0</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUBILLDET</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>1</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>Optional</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Optional Item?</Description>
+      <DefaultValue>N</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUBILLDET</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>0</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUBILLDET</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>1</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Student Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>7</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Session</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>8</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>Term</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Term</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>9</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>TermType</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>TermType</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>10</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>AmtBefDis</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Amount Before Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>11</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>SiblingDiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Sibling Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>12</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>YearlyDiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Yearll Payment Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>13</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>EmpDiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Employee Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>14</FieldID>
+      <TableName>OWA_EDUBILLDET</TableName>
+      <Name>Batch</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Batch</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUBILLINGROWS</TableName>
+    <TableDescription>School Billing Lines</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUBILLINGROWS</TableName>
+      <Name>feeId</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Fee Id</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUBILLINGROWS</TableName>
+      <Name>Amount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Amount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUBILLINGS</TableName>
+    <TableDescription>School Billing Table</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAEDUBILLING</Code>
+      <Name>BillingTable</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+      <UserObjectsChild>
+        <Code>OWAEDUBILLING</Code>
+        <TableName>OWA_EDUBILLSPECIAL</TableName>
+        <LogName />
+        <SonName>OWA_EDUBILLSPECIAL</SonName>
+      </UserObjectsChild>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>batchID</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Batch ID</Description>
+      <EditSize>11</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>StdDiscount</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>No. Student Discount</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>IstTermDate</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Ist Term Invoice Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>3rdTermDate</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>3rd Term Invoice Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Session</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>StudentCount</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Student Count</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>TotalFees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Total School Fees</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>7</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>TotalSDisc</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Total Sibling Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>8</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>TotalOTDisc</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Total One Time Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>9</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>BatchDesc</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Batch Description</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>10</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>Invoiced</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Invoice Generated</Description>
+      <DefaultValue>N</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUBILLINGS</TableName>
+        <FieldID>10</FieldID>
+        <IndexID>0</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUBILLINGS</TableName>
+        <FieldID>10</FieldID>
+        <IndexID>1</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>11</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>2ndTermDate</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>2nd Term Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>12</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>className</Name>
+      <Type>0</Type>
+      <Size>50</Size>
+      <Description>Class Name</Description>
+      <EditSize>50</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>13</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>term</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Term</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>14</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>pclass</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Class</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>15</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>studentcode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Student Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>16</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>outstandingAmt</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Outstanding Amount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>17</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>billAmt</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Bill Amount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>18</FieldID>
+      <TableName>OWA_EDUBILLINGS</TableName>
+      <Name>amttotal</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Amount Total</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUBILLSPECIAL</TableName>
+    <TableDescription>Bill Special Items</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Student</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>CardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>ItemCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Fee Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>ItemName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Fee Description</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>Amount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Amount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Session</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>Class</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>ClassCode</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>7</FieldID>
+      <TableName>OWA_EDUBILLSPECIAL</TableName>
+      <Name>Term</Name>
+      <Type>2</Type>
+      <Size>6</Size>
+      <Description>Term</Description>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUBILLSUMM</TableName>
+    <TableDescription>Billing Summary</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>N</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAEDUBILLSUMM</Code>
+      <Name>BILLSUM</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Student Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>CardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>TotalFees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Total Fees</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>SiblingDiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Sibling Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>AdvanceDiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Advance Pyt Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>Class</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Class Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>KeyStage</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Key Stage</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>7</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>IstTermFees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>1st Term Fee Total</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>8</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>2ndTermFees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>2nd Term Fees Total</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>9</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>3rdTermFees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>3rd Term Fees Total</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>10</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>EmpDiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Employee Discount</Description>
+      <DefaultValue>0.0</DefaultValue>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>11</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>1stTermInvNum</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>1st Term Invoice Number</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>12</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>2ndTermInvNum</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>2nd Term Invoice Number</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>13</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>3rdTermInvNum</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>3rd Term Invoice Number</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>14</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>Batch</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Batch</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>15</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>School</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>School</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>16</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>Level</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Level</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>17</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>FeeType</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Fee Type</Description>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <DefaultValue>R</DefaultValue>
+      <ValidValues>
+        <TableName>OWA_EDUBILLSUMM</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>0</IndexID>
+        <Value>R</Value>
+        <Description>Regular</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUBILLSUMM</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>1</IndexID>
+        <Value>F</Value>
+        <Description>Fee Paying</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUBILLSUMM</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>2</IndexID>
+        <Value>I</Value>
+        <Description>International</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>18</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>InvNum</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Invoice Number</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>19</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>Dim1</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>School</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>20</FieldID>
+      <TableName>OWA_EDUBILLSUMM</TableName>
+      <Name>Dim2</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>School</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUCLAHISTORY</TableName>
+    <TableDescription>Student Class History</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>Y</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>Y</ManageSeries>
+      <Code>OWAEDUCLASSH</Code>
+      <Name>CLASSHISTOYR</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Session</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Name>Keystage</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Key Stage</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Name>Class</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Class</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Name>Remark</Name>
+      <Type>0</Type>
+      <Size>254</Size>
+      <Description>Remark/Comments</Description>
+      <EditSize>254</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Name>EmpId</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Employee Id</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUCLAHISTORY</TableName>
+      <Name>Level</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Level</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUCLAHISTROWS</TableName>
+    <TableDescription>Student Class History Lines</TableDescription>
+    <Tabletype>0</Tabletype>
+    <Secondary>0</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUCLAHISTROWS</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Student Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUCLAHISTROWS</TableName>
+      <Name>CardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>StudentName</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUCLAHISTROWS</TableName>
+      <Name>DocEntry</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Doc Number</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUCLASS</TableName>
+    <TableDescription>School Classes</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>EDUCLASS</Code>
+      <Name>EDUCLASS</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUCLASS</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUCLASS</TableName>
+      <Name>keysatge</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Key Stage</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUCLASS</TableName>
+      <Name>School</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>School/Faculty</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUCLASS</TableName>
+      <Name>isfinalYr</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>Is Final Year?</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUCLASS</TableName>
+        <FieldID>1</FieldID>
+        <IndexID>0</IndexID>
+        <Value>Y</Value>
+        <Description>YES</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUCLASS</TableName>
+        <FieldID>1</FieldID>
+        <IndexID>1</IndexID>
+        <Value>N</Value>
+        <Description>NO</Description>
+      </ValidValues>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUCONFIG</TableName>
+    <TableDescription>School Configuration Table</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>N</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>N</CanDelete>
+      <CanFind>N</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAEDUConfig</Code>
+      <Name>SchoolConfiguration</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Name>bpstudent</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>BP Student Group</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Name>bpItemgroup</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>BP Item Group</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Name>SiblingCount</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Sibling Count</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Name>siblingdiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Sibling Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>%</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Name>staffkidtuition</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Staff Kid Tuition Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>%</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUCONFIG</TableName>
+      <Name>onetimepdiscount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>One Time Full Payment Discount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>%</EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUEMPCHILDREN</TableName>
+    <TableDescription>Employee Children</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>N</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAEDUEMPCHILD</Code>
+      <Name>EmployeeChildren</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUEMPCHILDREN</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUEMPCHILDREN</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Student ID</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUEMPCHILDREN</TableName>
+      <Name>CardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUEMPCHILDREN</TableName>
+      <Name>Empid</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Employee ID</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUEMPCHILDREN</TableName>
+      <Name>EmpName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Employee Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUFEEGROUP</TableName>
+    <TableDescription>School Fee Group</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>N</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAFEEGRP</Code>
+      <Name>FEEGRP</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUFEEGROUP</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUHEADER</TableName>
+    <TableDescription>School Billing Header</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>Y</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAEDUHEADER</Code>
+      <Name>STUDENT BILLING HEADER</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Session</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Term</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Term</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Keystage</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Key Stage</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Special</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Special</Description>
+      <DefaultValue>N</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>0</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>1</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Status</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Status</Description>
+      <DefaultValue>N</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>0</IndexID>
+        <Value>N</Value>
+        <Description>New</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>1</IndexID>
+        <Value>I</Value>
+        <Description>In-Process</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>2</IndexID>
+        <Value>R</Value>
+        <Description>Review</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>3</IndexID>
+        <Value>P</Value>
+        <Description>Posted</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>4</IndexID>
+        <Value>C</Value>
+        <Description>Cancelled</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Totalfees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Total Fees</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Totalstudent</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Total Student No.</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>7</FieldID>
+      <TableName>OWA_EDUHEADER</TableName>
+      <Name>Finalyear</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Final Year</Description>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>0</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUHEADER</TableName>
+        <FieldID>7</FieldID>
+        <IndexID>1</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUKEYSTAGE</TableName>
+    <TableDescription>School Key Stage</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>KEYSTAGE</Code>
+      <Name>KEYSTAGE</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUKEYSTAGE</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+      <UserObjectsChild>
+        <Code>KEYSTAGE</Code>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <LogName />
+        <SonName>OWA_EDUKEYSTALINES</SonName>
+      </UserObjectsChild>
+    </UserObjects>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSCHOOLS</TableName>
+    <TableDescription>Schools / Faculties</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>SCHOOLS</Code>
+      <Name>SCHOOLS</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUSCHOOLS</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSCHOOLS</TableName>
+      <Name>Dim1</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Cost Center</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUKEYSTALINES</TableName>
+    <TableDescription>School Classes</TableDescription>
+    <Tabletype>2</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUKEYSTALINES</TableName>
+      <Name>clsCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Class Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUKEYSTALINES</TableName>
+      <Name>clsDesc</Name>
+      <Type>0</Type>
+      <Size>50</Size>
+      <Description>Class Description</Description>
+      <EditSize>50</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUKEYSTALINES</TableName>
+      <Name>ksCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Key Stage Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUKEYSTALINES</TableName>
+      <Name>isFinalYr</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>Is Final Year?</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>0</IndexID>
+        <Value>Y</Value>
+        <Description>YES</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>1</IndexID>
+        <Value>N</Value>
+        <Description>NO</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUKEYSTALINES</TableName>
+      <Name>FeeGroup</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>School Fees Group</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUKEYSTALINES</TableName>
+      <Name>Level</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Is Final Year?</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>0</IndexID>
+        <Value>100</Value>
+        <Description>100 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>1</IndexID>
+        <Value>200</Value>
+        <Description>200 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>2</IndexID>
+        <Value>300</Value>
+        <Description>300 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>3</IndexID>
+        <Value>400</Value>
+        <Description>400 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>4</IndexID>
+        <Value>500</Value>
+        <Description>500 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUKEYSTALINES</TableName>
+        <FieldID>5</FieldID>
+        <IndexID>5</IndexID>
+        <Value>600</Value>
+        <Description>600 Level</Description>
+      </ValidValues>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUMAILBUCKET</TableName>
+    <TableDescription>School Mail Bucket</TableDescription>
+    <Tabletype>0</Tabletype>
+    <Secondary>0</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Student Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>StudName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>paremail</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Email</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>dtcreated</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Date Created</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>dtcreatetime</Name>
+      <Type>2</Type>
+      <Size>6</Size>
+      <Description>Time Created</Description>
+      <EditSize>6</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>dtSent</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Date Sent</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUMAILBUCKET</TableName>
+      <Name>tmSent</Name>
+      <Type>2</Type>
+      <Size>6</Size>
+      <Description>Time Sent</Description>
+      <EditSize>6</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUOTPHISTORY</TableName>
+    <TableDescription>Student One Time Payment Disc.</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>Y</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>OWAOTPHISTORY</Code>
+      <Name>YearlyPayment</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUOTPHISTORY</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+      <UserObjectsChild>
+        <Code>OWAOTPHISTORY</Code>
+        <TableName>OWA_EDUOTPHISTROWS</TableName>
+        <LogName />
+        <SonName>OWA_EDUOTPHISTROWS</SonName>
+      </UserObjectsChild>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUOTPHISTORY</TableName>
+      <Name>Session</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Session</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUOTPHISTROWS</TableName>
+    <TableDescription>Student One Time Pay Rows</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUOTPHISTROWS</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Student Code</Description>
+      <DefaultValue>N/A</DefaultValue>
+      <EditSize>20</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUOTPHISTROWS</TableName>
+      <Name>CardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUOTPHISTROWS</TableName>
+      <Name>DocEntry</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Doc Entry</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSCHFEEROWS</TableName>
+    <TableDescription>School Fees Schedule Lines</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>feeItemID</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Fee Item ID</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>itemDescription</Name>
+      <Type>0</Type>
+      <Size>150</Size>
+      <Description>Item Description</Description>
+      <EditSize>150</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>feeAmount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Fee Amount Regular</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>acccode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Account Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>feeAmountP</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Fee Amount Paying</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>feeAmountInt</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Fee Amount Internation</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUSCHFEEROWS</TableName>
+      <Name>Level</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Level</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>0</IndexID>
+        <Value>100</Value>
+        <Description>100 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>1</IndexID>
+        <Value>200</Value>
+        <Description>200 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>2</IndexID>
+        <Value>300</Value>
+        <Description>300 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>3</IndexID>
+        <Value>400</Value>
+        <Description>400 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>4</IndexID>
+        <Value>500</Value>
+        <Description>500 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>5</IndexID>
+        <Value>600</Value>
+        <Description>600 Level</Description>
+      </ValidValues>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSCHOOLFEES</TableName>
+    <TableDescription>School Fees</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>Y</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>Y</ManageSeries>
+      <Code>SCHOOLFEES</Code>
+      <Name>SCHOOLFEES</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+      <UserObjectsChild>
+        <Code>SCHOOLFEES</Code>
+        <TableName>OWA_EDUSCHFEEROWS</TableName>
+        <LogName />
+        <SonName>OWA_EDUSCHFEEROWS</SonName>
+      </UserObjectsChild>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>yearCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Year Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>termCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Term Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>keystage</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>Key Stage</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>FeeGroup</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>School Fees Group</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>FeeType</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Fee Type</Description>
+      <EditSize>1</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <DefaultValue>R</DefaultValue>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>0</IndexID>
+        <Value>R</Value>
+        <Description>Regular</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>4</FieldID>
+        <IndexID>0</IndexID>
+        <Value>F</Value>
+        <Description>Fee Paying</Description>
+      </ValidValues>
+    </TableFields>
+
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>Class</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>School Fees Group</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUSCHOOLFEES</TableName>
+      <Name>Level</Name>
+      <Type>2</Type>
+      <Size>11</Size>
+      <Description>Level</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>0</IndexID>
+        <Value>100</Value>
+        <Description>100 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>1</IndexID>
+        <Value>200</Value>
+        <Description>200 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>2</IndexID>
+        <Value>300</Value>
+        <Description>300 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>3</IndexID>
+        <Value>400</Value>
+        <Description>400 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>4</IndexID>
+        <Value>500</Value>
+        <Description>500 Level</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSCHOOLFEES</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>5</IndexID>
+        <Value>600</Value>
+        <Description>600 Level</Description>
+      </ValidValues>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSCHOOLREF</TableName>
+    <TableDescription>School Refund Transaction</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>Y</CanClose>
+      <CanCreateDefaultForm>Y</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>Y</ManageSeries>
+      <Code>REFTRANS</Code>
+      <Name>REFUND TRANS</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUSCHOOLREF</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+      <UserObjectsChild>
+        <Code>REFTRANS</Code>
+        <TableName>OWA_EDUSCHOOLREFDET</TableName>
+        <LogName />
+        <SonName>OWA_EDUSCHOOLREFDET</SonName>
+      </UserObjectsChild>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSCHOOLREF</TableName>
+      <Name>itemcode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Item</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSCHOOLREF</TableName>
+      <Name>tranDate</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Transaction Date</Description>
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSCHOOLREF</TableName>
+      <Name>tranType</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Transaction Type</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSCHOOLREF</TableName>
+      <Name>DocType</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Doc.Type</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSCHOOLREF</TableName>
+      <Name>CAcct</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Control Acct.</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSCHOOLREFDET</TableName>
+    <TableDescription>School Refund Tran. Detail</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSCHOOLREFDET</TableName>
+      <Name>cardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Pupil/Student</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSCHOOLREFDET</TableName>
+      <Name>cardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSCHOOLREFDET</TableName>
+      <Name>amount</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Amount</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUSCHOOLREFDET</TableName>
+      <Name>doc_Id</Name>
+      <Type>0</Type>
+      <Size>15</Size>
+      <Description>Document Id</Description>
+      <EditSize>15</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSESSIONS</TableName>
+    <TableDescription>School Session</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>SCHSESSION</Code>
+      <Name>SCHSESSION</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUSESSIONS</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSESSIONS</TableName>
+      <Name>Start</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Start Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSESSIONS</TableName>
+      <Name>End</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>End Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSIBLING</TableName>
+    <TableDescription>School Siblings</TableDescription>
+    <Tabletype>3</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>Y</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>Y</ManageSeries>
+      <Code>OWAEDUSIBLING</Code>
+      <Name>SchoolSiblings</Name>
+      <ObjectType>3</ObjectType>
+      <TableName>OWA_EDUSIBLING</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+      <UserObjectsChild>
+        <Code>OWAEDUSIBLING</Code>
+        <TableName>OWA_EDUSIBLINGROWS</TableName>
+        <LogName />
+        <SonName>OWA_EDUSIBLINGROWS</SonName>
+      </UserObjectsChild>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSIBLING</TableName>
+      <Name>familyName</Name>
+      <Type>0</Type>
+      <Size>50</Size>
+      <Description>Family Name</Description>
+      <EditSize>50</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSIBLING</TableName>
+      <Name>siblingCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Sibling Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSIBLINGROWS</TableName>
+    <TableDescription>Sibling Details</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>CardCode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Student Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>CardName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>Active</Name>
+      <Type>0</Type>
+      <Size>1</Size>
+      <Description>Active?</Description>
+      <DefaultValue>Y</DefaultValue>
+      <EditSize>1</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUSIBLINGROWS</TableName>
+        <FieldID>2</FieldID>
+        <IndexID>0</IndexID>
+        <Value>Y</Value>
+        <Description>Yes</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSIBLINGROWS</TableName>
+        <FieldID>2</FieldID>
+        <IndexID>1</IndexID>
+        <Value>N</Value>
+        <Description>No</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>siblingCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Sibling Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>studentCode</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Student Code</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>5</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>studentName</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Student Name</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>6</FieldID>
+      <TableName>OWA_EDUSIBLINGROWS</TableName>
+      <Name>isActive</Name>
+      <Type>0</Type>
+      <Size>10</Size>
+      <Description>Is Active?</Description>
+      <EditSize>10</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUSIBLINGROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>0</IndexID>
+        <Value>Y</Value>
+        <Description>YES</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUSIBLINGROWS</TableName>
+        <FieldID>6</FieldID>
+        <IndexID>1</IndexID>
+        <Value>N</Value>
+        <Description>NO</Description>
+      </ValidValues>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUSTDSUMMARY</TableName>
+    <TableDescription>School Student Summary</TableDescription>
+    <Tabletype>4</Tabletype>
+    <Secondary>2</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUSTDSUMMARY</TableName>
+      <Name>Cardcode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Card Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUSTDSUMMARY</TableName>
+      <Name>Totalfees</Name>
+      <Type>4</Type>
+      <Size>16</Size>
+      <Description>Total Fees</Description>
+      <EditSize>16</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType>S</EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUSTDSUMMARY</TableName>
+      <Name>Classcode</Name>
+      <Type>0</Type>
+      <Size>20</Size>
+      <Description>Class Code</Description>
+      <EditSize>20</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+  <usertable>
+    <TableName>OWA_EDUTERM</TableName>
+    <TableDescription>School Term</TableDescription>
+    <Tabletype>1</Tabletype>
+    <Secondary>1</Secondary>
+    <Created>N</Created>
+    <UseSequence>0</UseSequence>
+    <UserObjects>
+      <CanCancel>Y</CanCancel>
+      <CanClose>N</CanClose>
+      <CanCreateDefaultForm>N</CanCreateDefaultForm>
+      <CanDelete>Y</CanDelete>
+      <CanFind>Y</CanFind>
+      <CanLog>N</CanLog>
+      <LogTableName />
+      <CanYearTransfer>N</CanYearTransfer>
+      <ManageSeries>N</ManageSeries>
+      <Code>TERMS</Code>
+      <Name>TERMS</Name>
+      <ObjectType>1</ObjectType>
+      <TableName>OWA_EDUTERM</TableName>
+      <Created>N</Created>
+      <UseSequence>0</UseSequence>
+    </UserObjects>
+    <TableFields>
+      <FieldID>0</FieldID>
+      <TableName>OWA_EDUTERM</TableName>
+      <Name>termstart</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>Start Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>1</FieldID>
+      <TableName>OWA_EDUTERM</TableName>
+      <Name>termEnd</Name>
+      <Type>3</Type>
+      <Size>8</Size>
+      <Description>End Date</Description>
+      <DefaultValue />
+      <EditSize>8</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+    </TableFields>
+    <TableFields>
+      <FieldID>2</FieldID>
+      <TableName>OWA_EDUTERM</TableName>
+      <Name>session</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Session</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+    <TableFields>
+      <FieldID>3</FieldID>
+      <TableName>OWA_EDUTERM</TableName>
+      <Name>termType</Name>
+      <Type>0</Type>
+      <Size>30</Size>
+      <Description>Term Type</Description>
+      <EditSize>30</EditSize>
+      <Mandatory>Y</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+      <ValidValues>
+        <TableName>OWA_EDUTERM</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>0</IndexID>
+        <Value>1</Value>
+        <Description>First</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUTERM</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>1</IndexID>
+        <Value>2</Value>
+        <Description>Second</Description>
+      </ValidValues>
+      <ValidValues>
+        <TableName>OWA_EDUTERM</TableName>
+        <FieldID>3</FieldID>
+        <IndexID>2</IndexID>
+        <Value>3</Value>
+        <Description>Third</Description>
+      </ValidValues>
+    </TableFields>
+    <TableFields>
+      <FieldID>4</FieldID>
+      <TableName>OWA_EDUTERM</TableName>
+      <Name>InvRem</Name>
+      <Type>0</Type>
+      <Size>100</Size>
+      <Description>Invoice Remarks</Description>
+      <EditSize>100</EditSize>
+      <Mandatory>N</Mandatory>
+      <Created>N</Created>
+      <EditType> </EditType>
+    </TableFields>
+  </usertable>
+</Tables>

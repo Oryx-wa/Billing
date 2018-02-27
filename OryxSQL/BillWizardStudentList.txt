@@ -1,0 +1,96 @@
+﻿Declare @Batch int, @Session nvarchar(20), @Refresh as varchar(1)
+
+--Set @Batch = 1 
+--Set @Refresh = 'Y'
+--Set @Session = '2014/2015'
+
+Set @Batch = OWAPARAM1
+--Set @Refresh = 'OWAPARAM2'
+
+Select  @Session = U_Session  
+From [@OWA_EDUBILLINGS] 
+Where DocEntry = @Batch
+
+
+
+	Declare @tmp Table (BatchID int, SchSession nvarchar(30), CardCode nvarchar(30), CardName nvarchar(100), School nvarchar(30), 
+					ClassCode nvarchar(30), LineID int, nLevel int, ClassName nvarchar(100), SchoolName nvarchar(100), 
+					LevelName nvarchar(100), cType nvarchar(1), FeeType nvarchar(5), Dim1 nvarchar(20), Dim2 nvarchar(20)  ) 
+					
+	
+	--Get a list of additions
+	Insert @tmp ( CardCode, CardName,  ClassCode,LineID, nLevel,cType, ClassName, 
+		School, SchoolName, FeeType, Dim1, Dim2)
+	Select c.CardCode,c.CardName, c.U_Class,  0 LineID, U_Level,'A' cType, d.Name, e.Code, 
+		e.Name, ISNULL(U_FeeType, 'R'), e.U_Dim1, c.U_Dim2
+	From OCRD c 
+		join [@OWA_EDUCLASS] d on c.U_Class = d.Code
+		join [@OWA_EDUSCHOOLS] e on d.U_School = e.Code
+	Where c.CardCode not in (Select U_CardCode
+								From [@OWA_EDUBILLSUMM]
+								Where U_Batch = @Batch)
+	union all
+	-- Get a list of Existing Students in the batch
+	--Insert @tmp ( CardCode, CardName,  ClassCode,LineID, nLevel, ClassName, School, SchoolName)
+	Select c.CardCode,c.CardName, c.U_Class,  0 LineID,U_Level, 'E' cType, d.Name, e.Code, 
+		e.Name,ISNULL(U_FeeType, 'R'), e.U_Dim1, c.U_Dim2
+	From OCRD c 
+		join [@OWA_EDUCLASS] d on c.U_Class = d.Code
+		join [@OWA_EDUSCHOOLS] e on d.U_School = e.Code
+	Where c.CardCode in (Select U_CardCode
+								From [@OWA_EDUBILLSUMM]
+								Where U_Batch = @Batch)
+								
+	
+	--Remember to remove deleted students
+	
+	
+	
+	
+Delete [@OWA_EDUBILLSUMM]
+Where U_Cardcode not  In 
+		(Select a.CardCode
+		From OCRD a
+			join [@OWA_EDUCLASS] d on a.U_Class = d.Code
+		)
+
+Delete @tmp
+Where Cardcode not  In 
+		(Select a.CardCode
+		From OCRD a
+			join [@OWA_EDUCLASS] d on a.U_Class = d.Code
+		)
+
+
+Delete [@OWA_EDUBILLSUMM]
+Where U_Cardcode  In 
+		(Select CardCode
+		From  OCRD
+		Where frozenFor = 'Y' and validFor = 'N')
+	
+
+
+								
+Select a.SchoolName,a.nLevel,a.ClassName,b.NuminClass, a.CardCode,a.CardName,FeeType, a.cType,a.ClassCode,a.School, Dim1, Dim2
+from @tmp a JOIN 
+	(Select COUNT(CardCode) NuminClass, Classcode
+	From @tmp	
+	Group by classcode) b
+on a.ClassCode = b.ClassCode	
+where nLevel is not null
+order by 1,2				
+	
+
+	
+	
+	
+
+
+		
+				
+
+
+
+				
+
+

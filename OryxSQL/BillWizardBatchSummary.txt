@@ -1,0 +1,240 @@
+﻿Declare @Batch int, @Session nvarchar(20), @Refresh as varchar(1)
+Declare @SiblingDiscount numeric(19,6), @YearlyDiscount numeric(19,6), @EmpDiscount numeric(19,6)
+Declare @SessionStart Datetime
+
+
+
+--Set @Batch = 1
+--Set @Refresh = 'Y'
+
+
+Set @Batch = OWAPARAM1
+Set @Refresh = 'OWAPARAM2'
+
+IF @Refresh = 'Y'
+BEGIN
+	Declare @tmpFee table (Class varchar(20), FeeGroup varchar(10))
+
+	Insert @tmpFee
+	Select a.U_clsCode Class, b.Code FeeGroup
+	from [@OWA_EDUKEYSTALINES] a join [@OWA_EDUFEEGROUP] b
+		on a.U_FeeGroup = b.Code
+		
+	--Select * from @tmpFee
+
+
+	Declare @seed int
+
+	Select @seed = Max(docentry) from [@OWA_EDUBILLDET]
+	
+	--Print @seed
+
+	Select  @Session = U_Session  
+	From [@OWA_EDUBILLINGS] 
+	Where DocEntry = @Batch
+	
+	
+	
+	Select @SessionStart = a.U_Start
+	From [@OWA_EDUSESSIONS] a
+	Where Code = @Session
+	
+Print @Session
+	
+	--Select @SiblingDiscount = U_siblingdiscount *.01, @YearlyDiscount = U_onetimepdiscount*.01, @EmpDiscount = U_staffkidtuition *.01
+	--From [@OWA_EDUCONFIG]
+	--Where Code = 'Oryx'
+	
+	Declare @tmpDet Table (
+		[DocEntry1] [int] identity(1,1) ,DocEntry int, Batch int, 	[U_ItemCode] [nvarchar](30) ,
+		[U_ItemName] [nvarchar](100) ,	U_AmtBefDis [numeric](19, 6) ,	
+		[U_CardCode] [nvarchar](30) ,	[U_Session] [nvarchar](20) ,	
+		[U_Class] [nvarchar](20),U_School [nvarchar](20), U_FeeType nvarchar(5), U_level int)		
+		
+		Delete [@OWA_EDUBILLDET]
+		Where U_CardCode in (
+		Select U_cardCode from [@OWA_EDUBILLSUMM]
+		where U_Batch = @Batch 
+			and  (U_invnum is null or U_invnum = '' 
+				or U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C'))))
+	
+		
+
+		update [@OWA_EDUBILLSUMM]
+		set U_feeType = b.U_feeType
+		from [@OWA_EDUBILLSUMM] a join OCRD b
+			on a.U_cardCode = b.CardCode and a.U_feeType <> b.U_feeType
+		where a.U_Batch = @Batch
+		
+		
+		print @@Rowcount		
+
+		Declare @tmpSUMM Table (
+		[DocEntry] [int] ,
+		[LineId] [int] ,
+		[U_CardCode] [nvarchar](30) ,
+		[U_CardName] [nvarchar](100) ,
+		[U_TotalFees] [numeric](19, 6) ,
+		[U_Class] [nvarchar](30) ,
+		[U_School] [nvarchar](30) ,
+		[U_ClassName] [nvarchar](30) ,
+		[U_SchoolName] [nvarchar](30) )
+		
+		--Select a.U_Batch , a.DocEntry, a.U_CardCode, a.U_CardName,a.U_KeyStage, a.U_Class, b.FeeGroup
+		--		from [@OWA_EDUBILLSUMM] a join @tmpFee b on a.U_Class = b.Class
+		--		Where a.U_Batch = @Batch
+			
+		---- Populate students Regular Fees
+		Insert @tmpDet (Batch,U_Session, U_Class, U_CardCode, U_ItemCode, U_ItemName, U_AmtBefDis, U_FeeType, U_Level, U_School)
+		Select  @Batch,@Session, a.U_Class, a.U_CardCode, b.U_acccode, b.U_itemDescription, b.U_feeAmount,  
+			a.U_feeType, a.U_Level, a.U_School
+		From [@OWA_EDUBILLSUMM] a 
+			JOIN (Select a.U_yearCode,a.U_Class, b.U_acccode, b.U_itemDescription, b.U_feeAmount, a.U_Level
+				From [@OWA_EDUSCHOOLFEES] a JOIN [@OWA_EDUSCHFEEROWS] b
+					on a.DocEntry = b.DocEntry
+				Where a.U_yearCode = @Session
+					and U_feeAmount > 0) b
+			ON a.U_Class = b.U_Class and a.U_level = b.U_level
+		where a.U_Batch = @Batch 
+			and (a.U_feeType = 'R' and (a.U_invnum is null or a.U_invnum = ''))
+			or (a.U_feeType = 'R' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
+
+		union all
+		Select  @Batch,@Session, a.U_Class, a.U_CardCode, b.U_acccode, b.U_itemDescription, b.U_feeAmountP,  a.U_feeType, a.U_Level, a.U_School
+		From	[@OWA_EDUBILLSUMM] a 
+			JOIN (Select a.U_yearCode,a.U_Class, b.U_acccode, b.U_itemDescription, b.U_feeAmountP, a.U_Level
+				From [@OWA_EDUSCHOOLFEES] a JOIN [@OWA_EDUSCHFEEROWS] b
+					on a.DocEntry = b.DocEntry
+				Where a.U_yearCode = @Session
+					and U_feeAmountP > 0) b
+			ON a.U_Class = b.U_Class and a.U_level = b.U_level
+		where a.U_Batch = @Batch 
+			and (a.U_feeType = 'F' and (a.U_invnum is null or a.U_invnum = ''))
+			or (a.U_feeType = 'F' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
+		union all
+		Select  @Batch,@Session, a.U_Class, a.U_CardCode, b.U_acccode, b.U_itemDescription, b.U_feeAmtTp,  a.U_feeType, a.U_Level, a.U_School
+		From	[@OWA_EDUBILLSUMM] a 
+			JOIN (Select a.U_yearCode,a.U_Class, b.U_acccode, b.U_itemDescription, b.U_feeAmtTp, a.U_Level
+				From [@OWA_EDUSCHOOLFEES] a JOIN [@OWA_EDUSCHFEEROWS] b
+					on a.DocEntry = b.DocEntry
+				Where a.U_yearCode = @Session
+					and U_feeAmtTp > 0) b
+			ON a.U_Class = b.U_Class and a.U_level = b.U_level
+		where a.U_Batch = @Batch 
+			and (a.U_feeType = 'TP' and (a.U_invnum is null or a.U_invnum = ''))
+			or (a.U_feeType = 'TP' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
+		union all
+		Select  @Batch,@Session, a.U_Class, a.U_CardCode, b.U_acccode, b.U_itemDescription, b.U_feeAmtTpC,  a.U_feeType, a.U_Level, a.U_School
+		From	[@OWA_EDUBILLSUMM] a 
+			JOIN (Select a.U_yearCode,a.U_Class, b.U_acccode, b.U_itemDescription, b.U_feeAmtTpC, a.U_Level
+				From [@OWA_EDUSCHOOLFEES] a JOIN [@OWA_EDUSCHFEEROWS] b
+					on a.DocEntry = b.DocEntry
+				Where a.U_yearCode = @Session
+					and U_feeAmtTpC > 0) b
+			ON a.U_Class = b.U_Class and a.U_level = b.U_level
+		where a.U_Batch = @Batch 
+			and (a.U_feeType = 'TPC' and (a.U_invnum is null or a.U_invnum = ''))
+			or (a.U_feeType = 'TPC' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
+		union all
+		Select  @Batch,@Session, a.U_Class, a.U_CardCode, b.U_acccode, b.U_itemDescription, b.U_feeSand,  a.U_feeType, a.U_Level, a.U_School
+		From	[@OWA_EDUBILLSUMM] a 
+			JOIN (Select a.U_yearCode,a.U_Class, b.U_acccode, b.U_itemDescription, b.U_feeSand, a.U_Level
+				From [@OWA_EDUSCHOOLFEES] a JOIN [@OWA_EDUSCHFEEROWS] b
+					on a.DocEntry = b.DocEntry
+				Where a.U_yearCode = @Session
+					and U_feeSand > 0) b
+			ON a.U_Class = b.U_Class and a.U_level = b.U_level
+		where a.U_Batch = @Batch 
+			and (a.U_feeType = 'S' and (a.U_invnum is null or a.U_invnum = ''))
+			or (a.U_feeType = 'S' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
+		
+		--Select * from @tmpdet
+		--print @@Rowcount
+		update @tmpdet
+		Set DocEntry = DocEntry1 + ISNULL(@Seed,0)
+		
+		
+		--Select * from [@OWA_EDUBILLDET]
+			
+		Print @@Rowcount
+		Print @SessionStart
+		
+		
+		
+		
+		
+		
+		Delete [@OWA_EDUBILLDET] 
+		Where U_Batch = @Batch
+		
+		
+		
+		Insert [@OWA_EDUBILLDET] (DocEntry,U_Batch,  [Object], U_CardCode, U_ItemCode, U_ItemName, U_Amount,
+								 U_Session)
+		Select a.DocEntry, @Batch, 'OWABILLINGS', a.U_CardCode, a.U_ItemCode, a.U_ItemName, a.U_AmtBefDis,
+			a.U_Session
+		From @tmpDet a
+		
+		--Select * from [@OWA_EDUBILLDET]
+		--Where U_Batch = @Batch
+		--Select distinct U_CardCode from @tmpdet
+		
+		--Select a.DocEntry, @Batch, 'OWABILLINGS', a.U_CardCode, a.U_ItemCode, a.U_ItemName, a.U_AmtBefDis,
+		--	a.U_Session, a.U_Term, a.U_TermType, U_SiblingDiscount, U_YearlyDiscount, [U_EmpDiscount], U_Development
+		--From @tmpDet a
+
+		--Select * From [@OWA_EDUBILLDET]
+		
+		
+			
+		
+		
+		
+			
+		--Update [@OWA_EDUBILLDET]
+		--Set U_Amount = U_AmtBefDis - (ISNULL(U_SiblingDiscount, 0) + ISNULL(U_YearlyDiscount,0) + ISNULL(U_EmpDiscount,0))
+		 
+		update [@OWA_EDUBILLSUMM]
+		set U_invNum = 0
+		where U_cardcode in (Select Distinct [U_CardCode] from @tmpDet)
+		
+		Update [@OWA_EDUBILLSUMM]
+		Set U_TotalFees = b.U_TotalFees
+		FROM [@OWA_EDUBILLSUMM] a join (
+				Select U_CardCode,  SUM(U_Amount) U_TotalFees
+				from [@OWA_EDUBILLDET]
+				Where U_Batch = @Batch 
+				Group By U_CardCode) b
+			ON a.U_CardCode = b.U_CardCode
+		
+			
+		--Update [@OWA_EDUBILLSUMM]
+		--Set U_1stTermInvNum = b.DocEntry
+		--from [@OWA_EDUBILLSUMM] a JOIN OINV b ON a.U_Batch = b.U_Batch and b.U_TermType = 1
+		--	and a.U_CardCode = b.CardCode
+		
+		
+		
+		
+		
+END
+BEGIN
+Select  b.Name SchoolName,c.Name ClassName, a.U_CardCode, a.U_CardName, a.U_TotalFees, U_Level
+from [@OWA_EDUBILLSUMM] a	join [@OWA_EDUSCHOOLS] b 
+	on a.U_school = b.code
+	join [@OWA_EDUCLASS] c  on a.U_Class = c.Code
+where U_batch = @Batch
+order by 1,2, 6
+
+
+END
+	
+	
+
+		
+	
+	
+
+				
+
+

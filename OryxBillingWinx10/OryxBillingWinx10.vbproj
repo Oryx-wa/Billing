@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{D5C8C067-5C29-493A-A776-852228BCFCF5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>OWA.SBO.OryxBillingWinx10</RootNamespace>
+    <AssemblyName>OryxBillingWinx10</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>OryxBillingWinx10.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>OryxBillingWinx10.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>OryxBillingWinx10.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>OryxBillingWinx10.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>OryxBillingWinx10.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>OryxBillingWinx10.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SAPBusinessOneSDK" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddOnForms_SBOEDUBilling.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUBilling.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUBillingWizard.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUBillingWizard.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUClass.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUClass.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUClassHistory.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUClassHistory.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUConfiguration.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUConfiguration.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUEmployeeChild.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUEmployeeChild.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUFEEGROUP.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUFEEGROUP.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUKeyStage.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUKeyStage.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUOTPayDiscount.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUOTPayDiscount.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDURefundTrans.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDURefundTrans.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUSchoolFees.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUSchoolFees.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUSchools.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUSchools.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUSESSION.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUSESSION.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUSibling.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUSibling.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="AddOnForms_SBOEDUTerm.b1f.vb">
+      <DependentUpon>AddOnForms_SBOEDUTerm.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.vb" />
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PayrollAddon.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddOnForms_SBOEDUBilling.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUBillingWizard.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUClass.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUClassHistory.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUConfiguration.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUEmployeeChild.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUFEEGROUP.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUKeyStage.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUOTPayDiscount.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDURefundTrans.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUSchoolFees.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUSchools.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUSESSION.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUSibling.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="AddOnForms_SBOEDUTerm.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Users\Administrator\AppData\Roaming\Local Libraries\Local Documents\GitHub\SBOAddonBaseNew\SboAddOnBaseNew.vbproj">
+      <Project>{a168fdf6-a804-42b9-97b6-64f127aefb2d}</Project>
+      <Name>SboAddOnBaseNew</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OryxBillingLib10\OryxBillingLib10.vbproj">
+      <Project>{b832a559-ebf8-4579-8d77-e34b50011b46}</Project>
+      <Name>OryxBillingLib10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OryxSQL\OryxSQL.vbproj">
+      <Project>{7f03f5d8-ccf4-4a61-8763-dccb3fbc86b4}</Project>
+      <Name>OryxSQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddOnResx\AddonTables.xml" />
+    <EmbeddedResource Include="AddOnResx\formanditems.xml" />
+    <EmbeddedResource Include="AddOnResx\formsandmenus.xml" />
+    <EmbeddedResource Include="AddOnResx\Menus.xml" />
+    <Content Include="AddOnResx\Permissions.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,28 @@
+﻿Declare @Batch int, @Session nvarchar(20)
+
+--Set @Batch = 1 
+
+Set @Batch = OWAPARAM1
+
+
+Select  @Session = U_Session  
+From [@OWA_EDUBILLINGS] 
+Where DocEntry = @Batch
+
+
+	Declare @tmp Table (BatchID int, SchSession nvarchar(30), CardCode nvarchar(30), CardName nvarchar(100), KeyStage nvarchar(30), 
+					ClassCode nvarchar(30), ID int identity (1, 1), Empid int, EmpName nvarchar(100) ) 
+					
+	Insert @tmp (BatchID, SchSession, Empid,EmpName, CardCode, CardName, ClassCode, KeyStage )
+	Select @Batch, @Session, ISNULL(b.empid, 0) Empid,b.LastName + ', '+ b.FirstName Empname,
+	c.CardCode,c.CardName,d.U_Class, d.U_KeyStage
+	From [@OWA_EDUEMPCHILDREN] a left outer JOIN OHEM b
+		  ON a.U_Empid = b.empid
+		JOIN OCRD c ON a.U_CardCode = c.CardCode
+		JOIN [@OWA_EDUBILLSUMM] d ON a.U_CardCode = d.U_CardCode
+	Where d.U_Batch = @Batch
+		--and b.U_Session = @Session
+	
+
+Select a.KeyStage [Key Stage],a.ClassCode Class, a.Empid [Staff ID], a.EmpName [Staff Name],  a.CardCode [Student Code], a.CardName [Student Name]
+from @tmp a

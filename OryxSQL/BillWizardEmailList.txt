@@ -1,0 +1,28 @@
+﻿Declare @Batch int, @Session nvarchar(20),@dStart datetime
+
+--Set @Batch = 4
+
+Set @Batch = OWAPARAM1
+
+
+Select  @Session = U_Session, @dstart = b.U_Start
+From [@OWA_EDUBILLINGS] a JOIN [@OWA_EDUSESSIONS] b 
+	on a.U_Session = b.Code
+Where a.DocEntry = @Batch
+
+
+	Declare @tmp Table (BatchID int, SchSession nvarchar(30), CardCode nvarchar(30), CardName nvarchar(100), KeyStage nvarchar(30), 
+					ClassCode nvarchar(100), ID int identity (1, 1), eMail nvarchar(254), School nvarchar(100) ) 
+					
+	Insert @tmp (BatchID, SchSession,  CardCode, CardName, ClassCode, School, eMail )
+	Select @Batch, @Session, c.CardCode,c.CardName,e.Name, b.Name, c.E_Mail
+	From OCRD c 
+		JOIN [@OWA_EDUBILLSUMM] d ON c.CardCode = d.U_CardCode
+		join [@OWA_EDUSCHOOLS] b 
+		on d.U_school = b.code
+		join [@OWA_EDUCLASS] e  on d.U_Class = e.Code
+	Where d.U_Batch = @Batch
+		
+
+Select a.[School],a.ClassCode Class,   a.CardCode [Student Code], a.CardName [Student Name], eMail [email Address]
+from @tmp a
