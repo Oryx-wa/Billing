@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Tables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="usertable">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TableName" type="xs:string" />
+							<xs:element name="TableDescription" type="xs:string" />
+							<xs:element name="Tabletype" type="xs:unsignedByte" />
+							<xs:element name="Secondary" type="xs:byte" />
+							<xs:element name="Created" type="xs:string" />
+							<xs:element name="UseSequence" type="xs:unsignedByte" />
+							<xs:element minOccurs="0" name="UserObjects">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CanCancel" type="xs:string" />
+										<xs:element name="CanClose" type="xs:string" />
+										<xs:element name="CanCreateDefaultForm" type="xs:string" />
+										<xs:element name="CanDelete" type="xs:string" />
+										<xs:element name="CanFind" type="xs:string" />
+										<xs:element name="CanLog" type="xs:string" />
+										<xs:element minOccurs="0" name="LogTableName" type="xs:string" />
+										<xs:element name="CanYearTransfer" type="xs:string" />
+										<xs:element name="ManageSeries" type="xs:string" />
+										<xs:element name="Code" type="xs:string" />
+										<xs:element name="Name" type="xs:string" />
+										<xs:element name="ObjectType" type="xs:unsignedByte" />
+										<xs:element name="TableName" type="xs:string" />
+										<xs:element name="Created" type="xs:string" />
+										<xs:element name="UseSequence" type="xs:unsignedByte" />
+										<xs:element minOccurs="0" name="UserObjectsChild">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Code" type="xs:string" />
+													<xs:element name="TableName" type="xs:string" />
+													<xs:element name="LogName" type="xs:string" />
+													<xs:element name="SonName" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="TableFields">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="FieldID" type="xs:unsignedByte" />
+										<xs:element name="TableName" type="xs:string" />
+										<xs:element name="Name" type="xs:string" />
+										<xs:element name="Type" type="xs:unsignedByte" />
+										<xs:element name="Size" type="xs:unsignedByte" />
+										<xs:element name="Description" type="xs:string" />
+										<xs:element minOccurs="0" name="DefaultValue" type="xs:string" />
+										<xs:element minOccurs="0" name="EditSize" type="xs:unsignedByte" />
+										<xs:element name="Mandatory" type="xs:string" />
+										<xs:element name="Created" type="xs:string" />
+										<xs:element minOccurs="0" name="EditType" type="xs:string" />
+										<xs:element minOccurs="0" maxOccurs="unbounded" name="ValidValues">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="TableName" type="xs:string" />
+													<xs:element name="FieldID" type="xs:unsignedByte" />
+													<xs:element name="IndexID" type="xs:unsignedByte" />
+													<xs:element name="Value" type="xs:string" />
+													<xs:element name="Description" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

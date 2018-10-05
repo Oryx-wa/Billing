@@ -161,7 +161,7 @@
     <EmbeddedResource Include="BillWizardStudentList.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Users\Administrator\AppData\Roaming\Local Libraries\Local Documents\GitHub\SBOAddonBaseNew\SboAddOnBaseNew.vbproj">
+    <ProjectReference Include="..\SBOAddonBaseNew\SboAddOnBaseNew.vbproj">
       <Project>{a168fdf6-a804-42b9-97b6-64f127aefb2d}</Project>
       <Name>SboAddOnBaseNew</Name>
     </ProjectReference>

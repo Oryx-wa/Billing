@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="OWA" SchemaVersion="" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="OryxBilling" ExtVersion="3.1.0" Contdata="tayo.adegbola@oryx-wa.com" Partner="Tayo Adegbola" DBType="MSSQL" ClientType="W">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="" To="" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository />
+    <Deployment>
+      <Properties />
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="F:\Github\NewBilling\OryxBillingWinx10\bin\x86\Release\OryxBillingWinx10.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="OryxBillingLib10.dll">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.b1s">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe.config">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="OryxSQL.dll">
+              <Actions />
+            </File>
+            <File FileName="SboAddOnBase.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="OryxBillingLib10.dll">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.b1s">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe.config">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="OryxSQL.dll">
+              <Actions />
+            </File>
+            <File FileName="SboAddOnBase.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="F:\Github\NewBilling\OryxBillingWinx10\bin\x64\Release\OryxBillingWinx10.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="OryxBillingLib10.dll">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.b1s">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe.config">
+              <Actions />
+            </File>
+            <File FileName="OryxSQL.dll">
+              <Actions />
+            </File>
+            <File FileName="SboAddOnBase.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="OryxBillingLib10.dll">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.b1s">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe">
+              <Actions />
+            </File>
+            <File FileName="OryxBillingWinx10.exe.config">
+              <Actions />
+            </File>
+            <File FileName="OryxSQL.dll">
+              <Actions />
+            </File>
+            <File FileName="SboAddOnBase.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>

@@ -164,13 +164,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Users\Administrator\AppData\Roaming\Local Libraries\Local Documents\GitHub\SBOAddonBaseNew\SboAddOnBaseNew.vbproj">
-      <Project>{a168fdf6-a804-42b9-97b6-64f127aefb2d}</Project>
-      <Name>SboAddOnBaseNew</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OryxSQL\OryxSQL.vbproj">
       <Project>{7f03f5d8-ccf4-4a61-8763-dccb3fbc86b4}</Project>
       <Name>OryxSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SBOAddonBaseNew\SboAddOnBaseNew.vbproj">
+      <Project>{a168fdf6-a804-42b9-97b6-64f127aefb2d}</Project>
+      <Name>SboAddOnBaseNew</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

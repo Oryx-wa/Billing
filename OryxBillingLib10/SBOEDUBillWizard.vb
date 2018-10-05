@@ -115,7 +115,7 @@ Public Class SBOEDUBillWizard
 
     Private lReviewLoaded As Boolean
 
-    Private btnPost As Button
+    Private btnPost, btnCancelInv As Button
 
     Private grdInvoice As Grid
 
@@ -188,6 +188,7 @@ Public Class SBOEDUBillWizard
         Me.btnEmail = CType(Me.m_Form.Items.Item("btnEmail").Specific, Button)
         Me.grdEmail = CType(Me.m_Form.Items.Item("grdEmail").Specific, Grid)
         Me.btnPost = CType(Me.m_Form.Items.Item("btnPost").Specific, Button)
+        Me.btnCancelInv = CType(Me.m_Form.Items.Item("btnCancInv").Specific, Button)
         Me.grdInvoice = CType(Me.m_Form.Items.Item("grdInvoice").Specific, Grid)
         Me.fillTextArray()
         Me.m_DataTable0 = Me.m_Form.DataSources.DataTables.Item("DT_Students")
@@ -289,7 +290,7 @@ Public Class SBOEDUBillWizard
                     If flag Then
                         Select Case Me.CurrentPane
                             Case 3
-                                Me.RefreshStudentList(True)
+                                'Me.RefreshStudentList(True)
                             Case 4
                                 Me.RefreshSummary(True)
                             Case 5
@@ -327,14 +328,19 @@ Public Class SBOEDUBillWizard
                                                     If flag Then
                                                         Me.PostInvoices(-1)
                                                     Else
-                                                        flag = (Operators.CompareString(itemUID, "grdSpecial", False) = 0)
+                                                        flag = (Operators.CompareString(itemUID, "btnCancInv", False) = 0)
                                                         If flag Then
-                                                            Dim flag2 As Boolean = pVal.Row = -1
-                                                            If flag2 Then
-                                                                Me.m_DataTable1.Rows.Add(1)
-                                                                Dim comboBoxColumn As ComboBoxColumn = CType(Me.grdSpecial.Columns.Item(0), ComboBoxColumn)
-                                                                ' The following expression was wrapped in a checked-expression
-                                                                comboBoxColumn.Click(Me.m_DataTable1.Rows.Count - 1, True, 0)
+                                                            Me.CancelInvoices()
+                                                        Else
+                                                            flag = (Operators.CompareString(itemUID, "grdSpecial", False) = 0)
+                                                            If flag Then
+                                                                Dim flag2 As Boolean = pVal.Row = -1
+                                                                If flag2 Then
+                                                                    Me.m_DataTable1.Rows.Add(1)
+                                                                    Dim comboBoxColumn As ComboBoxColumn = CType(Me.grdSpecial.Columns.Item(0), ComboBoxColumn)
+                                                                    ' The following expression was wrapped in a checked-expression
+                                                                    comboBoxColumn.Click(Me.m_DataTable1.Rows.Count - 1, True, 0)
+                                                                End If
                                                             End If
                                                         End If
                                                     End If
@@ -544,7 +550,7 @@ Public Class SBOEDUBillWizard
             If lRefresh Then
                 Me.ExecuteSQLDT("BillWizardStudentList", Me.m_DataTable0, New String() {Me.DocEntry.ToString(), "Y"})
             Else
-                Me.ExecuteSQLDT("BillWizardStudentList", Me.m_DataTable0, New String() {Me.DocEntry.ToString()})
+                Me.ExecuteSQLDT("BillWizardStudentList", Me.m_DataTable0, New String() {Me.DocEntry.ToString(), "N"})
             End If
             Me.grdStud.DataTable = Me.m_DataTable0
             Me.grdStud.CollapseLevel = 1
@@ -821,72 +827,75 @@ Public Class SBOEDUBillWizard
 
     Private Sub SaveStudentList2()
         ' The following expression was wrapped in a checked-statement
-        Try
-            Me.DocEntry = Conversions.ToInteger(Me.m_DBDataSource0.GetValue("DocEntry", Me.m_DBDataSource0.Offset))
-            Dim text As String = " Delete [@OWA_EDUBILLSUMM] Where (U_InvNum is null or U_InvNum = 0) and U_Batch = " + Me.DocEntry.ToString()
-            Me.ExecuteSQLDT(text)
-            text = " Delete [@OWA_EDUBILLDET] Where  U_Batch = " + Me.DocEntry.ToString()
-            text = text + " And U_CardCode not in (Select U_CardCode from [@OWA_EDUBILLSUMM] Where U_Batch = " + Me.DocEntry.ToString() + ")"
-            Me.ExecuteSQLDT(text)
-            text = "Select Max(ISNULL(DocEntry,0)) + 1 from [@OWA_EDUBILLSUMM]"
-            Dim dataTable As DataTable = Me.ExecuteSQLDT(text)
-            Dim num As Integer = Conversions.ToInteger(dataTable.GetValue(0, 0))
-            Dim flag As Boolean = num = 0
-            If flag Then
-                num += 1
-            End If
-            Me.m_Form.Freeze(True)
-            Me.oProgBar = Me.m_SboApplication.StatusBar.CreateProgressBar("Oryx01", Me.m_DataTable0.Rows.Count - 1, False)
-            Me.oProgBar.Value = 0
-            Dim arg_10D_0 As Integer = 0
-            Dim num2 As Integer = Me.m_DataTable0.Rows.Count - 1
-            Dim num3 As Integer = arg_10D_0
-            While True
-                Dim arg_26D_0 As Integer = num3
-                Dim num4 As Integer = num2
-                If arg_26D_0 > num4 Then
-                    Exit While
-                End If
-                num += 1
-                Dim dataTable2 As DataTable = Me.m_DataTable0
-                If dataTable2.GetValue("cType", num3).ToString() = "A" Then
-                    Me.ExecuteSQLDT("BillWizardSaveSummary", New String() {num.ToString(),
-                                                                      Me.DocEntry.ToString(), "OWAEDUBILLING",
-                                                                      Conversions.ToString(dataTable2.GetValue("CardCode", num3)),
-                                                                      dataTable2.GetValue("CardName", num3).ToString().Replace("'", ""),
-                                                                      dataTable2.GetValue("School", num3).ToString(),
-                                                                      Conversions.ToString(dataTable2.GetValue("ClassCode", num3)),
-                                                                      Conversions.ToString(dataTable2.GetValue("FeeType", num3)),
-                                                                      Conversions.ToString(dataTable2.GetValue("nLevel", num3)),
-                                                                      Conversions.ToString(dataTable2.GetValue("Dim1", num3)),
-                                                                      Conversions.ToString(dataTable2.GetValue("Dim2", num3))})
+        Me.RefreshStudentList(True)
+        'Try
+        '    Me.RefreshStudentList(True)
+        '    Me.DocEntry = Conversions.ToInteger(Me.m_DBDataSource0.GetValue("DocEntry", Me.m_DBDataSource0.Offset))
+        '    Dim text As String = " Delete [@OWA_EDUBILLSUMM] Where (U_InvNum is null or U_InvNum = 0) and U_Batch = " + Me.DocEntry.ToString()
+        '    Me.ExecuteSQLDT(text)
+        '    text = " Delete [@OWA_EDUBILLDET] Where  U_Batch = " + Me.DocEntry.ToString()
+        '    text = text + " And U_CardCode not in (Select U_CardCode from [@OWA_EDUBILLSUMM] Where U_Batch = " + Me.DocEntry.ToString() + ")"
+        '    Me.ExecuteSQLDT(text)
+        '    text = "Select Max(ISNULL(DocEntry,0)) + 1 from [@OWA_EDUBILLSUMM]"
+        '    Dim dataTable As DataTable = Me.ExecuteSQLDT(text)
+        '    Dim num As Integer = Conversions.ToInteger(dataTable.GetValue(0, 0))
+        '    Dim flag As Boolean = num = 0
+        '    If flag Then
+        '        num += 1
+        '    End If
+        '    Me.m_Form.Freeze(True)
+        '    Me.oProgBar = Me.m_SboApplication.StatusBar.CreateProgressBar("Oryx01", Me.m_DataTable0.Rows.Count - 1, False)
+        '    Me.oProgBar.Value = 0
+        '    Dim arg_10D_0 As Integer = 0
+        '    Dim num2 As Integer = Me.m_DataTable0.Rows.Count - 1
+        '    Dim num3 As Integer = arg_10D_0
+        '    While True
+        '        Dim arg_26D_0 As Integer = num3
+        '        Dim num4 As Integer = num2
+        '        If arg_26D_0 > num4 Then
+        '            Exit While
+        '        End If
+        '        num += 1
+        '        Dim dataTable2 As DataTable = Me.m_DataTable0
+        '        If dataTable2.GetValue("cType", num3).ToString() = "A" Then
+        '            Me.ExecuteSQLDT("BillWizardSaveSummary", New String() {num.ToString(),
+        '                                                              Me.DocEntry.ToString(), "OWAEDUBILLING",
+        '                                                              Conversions.ToString(dataTable2.GetValue("CardCode", num3)),
+        '                                                              dataTable2.GetValue("CardName", num3).ToString().Replace("'", ""),
+        '                                                              dataTable2.GetValue("School", num3).ToString(),
+        '                                                              Conversions.ToString(dataTable2.GetValue("ClassCode", num3)),
+        '                                                              Conversions.ToString(dataTable2.GetValue("FeeType", num3)),
+        '                                                              Conversions.ToString(dataTable2.GetValue("nLevel", num3)),
+        '                                                              Conversions.ToString(dataTable2.GetValue("Dim1", num3)),
+        '                                                              Conversions.ToString(dataTable2.GetValue("Dim2", num3))})
 
-                End If
+        '        End If
 
 
-                Me.oProgBar.Text = Me.m_DataTable0.GetValue("CardCode", num3).ToString() + " added successfully"
-                Me.oProgBar.Value = 2
-                num3 += 1
-            End While
-            Me.m_DBDataSource0.Clear()
-            Me.m_DBDataSource0.Query(Nothing)
-            Me.getOffset(Me.DocEntry.ToString(), "DocEntry", Me.m_DBDataSource0)
-            Me.m_Form.Freeze(False)
-            Me.oProgBar.[Stop]()
-            Me.oProgBar = Nothing
-        Catch expr_2CA As Exception
-            ProjectData.SetProjectError(expr_2CA)
-            Dim ex As Exception = expr_2CA
-            Me.m_SboApplication.StatusBar.SetText(ex.Message, BoMessageTime.bmt_Short, BoStatusBarMessageType.smt_Error)
-            ProjectData.ClearProjectError()
-        Finally
-            Dim flag As Boolean = Me.oProgBar IsNot Nothing
-            If flag Then
-                Me.oProgBar.[Stop]()
-                Me.oProgBar = Nothing
-            End If
-            Me.m_Form.Freeze(False)
-        End Try
+        '        Me.oProgBar.Text = Me.m_DataTable0.GetValue("CardCode", num3).ToString() + " added successfully"
+        '        Me.oProgBar.Value = 2
+        '        num3 += 1
+        '    End While
+        '    Me.m_DBDataSource0.Clear()
+        '    Me.m_DBDataSource0.Query(Nothing)
+        '    Me.getOffset(Me.DocEntry.ToString(), "DocEntry", Me.m_DBDataSource0)
+        '    Me.m_Form.Freeze(False)
+        '    Me.oProgBar.[Stop]()
+        '    Me.oProgBar = Nothing
+        '    Me.RefreshSummary(True)
+        'Catch expr_2CA As Exception
+        '    ProjectData.SetProjectError(expr_2CA)
+        '    Dim ex As Exception = expr_2CA
+        '    Me.m_SboApplication.StatusBar.SetText(ex.Message, BoMessageTime.bmt_Short, BoStatusBarMessageType.smt_Error)
+        '    ProjectData.ClearProjectError()
+        'Finally
+        '    Dim flag As Boolean = Me.oProgBar IsNot Nothing
+        '    If flag Then
+        '        Me.oProgBar.[Stop]()
+        '        Me.oProgBar = Nothing
+        '    End If
+        '    Me.m_Form.Freeze(False)
+        'End Try
     End Sub
 
     Private Sub SaveSpecial()
@@ -1030,14 +1039,12 @@ Public Class SBOEDUBillWizard
         ' The following expression was wrapped in a checked-statement
         Try
             Me.DocEntry = Conversions.ToInteger(Me.m_DBDataSource0.GetValue("DocEntry", Me.m_DBDataSource0.Offset))
-            Dim text As String = "Select b.Name [School], c.Name [Class], a.U_CardCode [Student Code], a.U_CardName [Student Name] ,"
-            text += "  a.U_TotalFees [Total Fees], U_Level, d.DocEntry [Invoice Number] "
-            text += "from [@OWA_EDUBILLSUMM] a join [@OWA_EDUSCHOOLS] b on a.U_school = b.code "
-            text += " join [@OWA_EDUCLASS] c  on a.U_Class = c.Code "
-            text += " left outer join (Select DocEntry from OINV where canceled = 'N' and U_Batch = 1) d 	on a.U_invNum = d.DocEntry "
-            text = text + "Where U_Batch = " + Me.DocEntry.ToString()
+            Dim text As String = String.Format("Select b.Name [School], c.Name [Class], a.U_CardCode [Student Code], a.U_CardName [Student Name] ," +
+             " a.U_TotalFees [Total Fees], U_Level, d.DocEntry [Invoice Number]  from [@OWA_EDUBILLSUMM] a join [@OWA_EDUSCHOOLS] b on a.U_school = b.code " +
+             " Join [@OWA_EDUCLASS] c  On a.U_Class = c.Code Left outer join (Select DocEntry from OINV where canceled = 'N' and U_Batch = {0}) d on a.U_invNum = d.DocEntry " +
+             " Where U_Batch = {0}  order by 1,2,3 ", Me.DocEntry.ToString())
             'text += " and U_InvNum not in (Select DocEntry from OINV where canceled = 'Y') "
-            text += " order by 1,2,3 "
+
             Me.m_Form.Freeze(True)
             Me.m_DataTable4.Clear()
             Me.m_DataTable4.ExecuteQuery(text)
@@ -1072,6 +1079,49 @@ Public Class SBOEDUBillWizard
         End Try
     End Sub
 
+    Private Sub CancelInvoices()
+        Try
+            Dim str As String = ""
+            Dim text As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+            Dim dataTable As DataTable = Me.m_Form.DataSources.DataTables.Item("DT_InvH")
+            Dim dataTable2 As DataTable = Me.m_Form.DataSources.DataTables.Item("DT_InvD")
+            Dim dataTable3 As DataTable = Me.m_Form.DataSources.DataTables.Item("DT_0")
+            Me.ExecuteSQLDT("BillWizardLastBackup", dataTable3, New String() {Me.m_SboApplication.Company.DatabaseName.ToString().Trim(), text})
+            Dim flag As Boolean = Not dataTable3.IsEmpty
+            If flag Then
+                Dim num As Integer = Conversions.ToInteger(dataTable3.GetValue("diff", 0))
+                flag = (num > 30)
+                If flag Then
+                    Me.m_SboApplication.MessageBox("A backup is needed within 30 mins of generating invoices,", 1, "Ok", "", "")
+                Else
+                    Dim text3 As String = String.Format("Select DocEntry From OINV Where U_Batch = {0} and  canceled = 'N'", Me.DocEntry.ToString())
+
+
+                    dataTable.Clear()
+                    dataTable.ExecuteQuery(text3)
+                    flag = dataTable.IsEmpty
+                    If flag Then
+                        Me.m_SboApplication.StatusBar.SetText("No invoices to post", BoMessageTime.bmt_Medium, BoStatusBarMessageType.smt_Warning)
+                    Else
+                        Dim documents As Documents = CType(Me.m_ParentAddon.SboCompany.GetBusinessObject(BoObjectTypes.oInvoices), Documents)
+
+                        For i = 0 To dataTable.Rows.Count - 1
+                            Dim key As Integer = Conversions.ToInteger(dataTable.GetValue("DocEntry", i))
+                            documents.GetByKey(key)
+                            Dim oCancelDoc As SAPbobsCOM.Documents = documents.CreateCancellationDocument()
+                            oCancelDoc.Add()
+                            Me.m_SboApplication.StatusBar.SetText("Invoice " + key.ToString() + "cancelled successfully", BoMessageTime.bmt_Medium, BoStatusBarMessageType.smt_Success)
+                        Next
+
+                    End If
+                End If
+            End If
+
+        Catch ex As Exception
+            Me.m_SboApplication.StatusBar.SetText(ex.Message, BoMessageTime.bmt_Medium, BoStatusBarMessageType.smt_Error)
+        End Try
+    End Sub
+
     Private Sub PostInvoices(Optional TermType As Integer = -1)
         ' The following expression was wrapped in a checked-statement
         Try
@@ -1102,13 +1152,14 @@ Public Class SBOEDUBillWizard
                     mdocH.BatchDate = dateTime
                     mdocH.Session = value2
                     Me.oProgBar = Me.m_SboApplication.StatusBar.CreateProgressBar("Oryx01", (dataTable.Rows.Count - 1) * 3, False)
-                    Dim text2 As String = " Where a.U_batch = " + Me.DocEntry.ToString()
+
                     Dim num2 As Integer
                     'text2 = String.Concat(New String() {text2, "  and a.U_Batch =  ", Me.DocEntry.ToString(), ")"})
-                    Dim text3 As String = "Select a.U_CardCode, a.U_CardName, a.U_School, a.U_Class, a.U_level, b.U_Dim1, b.U_Dim2"
-                    text3 = text3 + " from [@OWA_EDUBILLSUMM] a join Ocrd b on a.U_cardCode = b.CardCode" + text2
-                    text3 = text3 + " and U_cardcode not in (Select CardCode from OCRD where frozenfor = 'Y' and CardType = 'C')"
-                    text3 += " Order By  a.U_Class"
+                    Dim text3 As String = String.Format("Select a.U_CardCode, a.U_CardName, a.U_School, a.U_Class, a.U_level, b.U_Dim1, b.U_Dim2 " +
+                     "from [@OWA_EDUBILLSUMM] a join Ocrd b on a.U_cardCode = b.CardCode Where a.U_batch = {0} and b.frozenFor <> 'Y' " +
+                     " and a.U_CardCode not in (Select CardCode from OINV where canceled = 'N' and U_Batch = {0}) Order By  a.U_Class", Me.DocEntry.ToString())
+
+
                     dataTable.Clear()
                     dataTable.ExecuteQuery(text3)
                     flag = dataTable.IsEmpty
