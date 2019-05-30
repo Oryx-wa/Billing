@@ -348,7 +348,7 @@ IL_78:
             Dim num As Integer = Me.m_DBDataSource2.Size - 1
             Dim num2 As Integer = arg_1D_0
             Dim num4 As Double
-            Dim feeP, feeInt, Topup, TopupC, Sandwich, sandwichC, masters, mphil, mastes, phd As Double
+            Dim feeP, feeInt, Topup, TopupC, Sandwich, sandwichC, masters, mphil, mastes, phd, sandwichI As Double
             While True
                 Dim arg_44_0 As Integer = num2
                 Dim num3 As Integer = num
@@ -365,6 +365,7 @@ IL_78:
                 masters += Conversions.ToDouble(Me.m_DBDataSource2.GetValue("U_Masters", num2))
                 mphil += Conversions.ToDouble(Me.m_DBDataSource2.GetValue("U_Mphil", num2))
                 phd += Conversions.ToDouble(Me.m_DBDataSource2.GetValue("U_Phd", num2))
+                sandwichI += Conversions.ToDouble(Me.m_DBDataSource2.GetValue("U_feeSandI", num2))
 
                 ' The following expression was wrapped in a checked-statement
                 num2 += 1
@@ -379,6 +380,7 @@ IL_78:
             Me.m_Form.DataSources.UserDataSources.Item("UD_Masters").ValueEx = Conversions.ToString(masters)
             Me.m_Form.DataSources.UserDataSources.Item("UD_MPhil").ValueEx = Conversions.ToString(mphil)
             Me.m_Form.DataSources.UserDataSources.Item("UD_Phd").ValueEx = Conversions.ToString(phd)
+            Me.m_Form.DataSources.UserDataSources.Item("UD_SandI").ValueEx = Conversions.ToString(sandwichI)
         Catch expr_6E As Exception
             ProjectData.SetProjectError(expr_6E)
             Dim ex As Exception = expr_6E

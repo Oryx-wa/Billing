@@ -181,6 +181,18 @@ BEGIN
 		where a.U_Batch = @Batch 
 			and (a.U_feeType = 'SC' and (a.U_invnum is null or a.U_invnum = ''))
 			or (a.U_feeType = 'SC' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
+		union all
+		Select  @Batch,@Session, a.U_Class, a.U_CardCode, b.U_acccode, b.U_itemDescription, b.U_feeSandI,  a.U_feeType, a.U_Level, a.U_School
+		From	[@OWA_EDUBILLSUMM] a 
+			JOIN (Select a.U_yearCode,a.U_Class, b.U_acccode, b.U_itemDescription, b.U_feeSandI, a.U_Level
+				From [@OWA_EDUSCHOOLFEES] a JOIN [@OWA_EDUSCHFEEROWS] b
+					on a.DocEntry = b.DocEntry
+				Where a.U_yearCode = @Session
+					and U_feeSandC > 0) b
+			ON a.U_Class = b.U_Class and a.U_level = b.U_level
+		where a.U_Batch = @Batch 
+			and (a.U_feeType = 'SI' and (a.U_invnum is null or a.U_invnum = ''))
+			or (a.U_feeType = 'SI' and a.U_invnum in  (Select DocEntry from OINV where canceled IN( 'Y', 'C')))
 		
 		update @tmpdet
 		Set DocEntry = DocEntry1 + ISNULL(@Seed,0)			
