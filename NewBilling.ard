@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="OWA" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="Oryx Billing" ExtVersion="1.3.0" Contdata="tayo.adegbola@oryx-wa.com" Partner="Oryx Africa" DBType="HANA" ClientType="A">
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="OWA" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="Oryx Billing" ExtVersion="1.3.1" Contdata="tayo.adegbola@oryx-wa.com" Partner="Oryx Africa" DBType="MSSQL" ClientType="A">
   <Validity>
     <SBOCompatibility>
-      <Version From="9.150.00" To="9.201.00" />
+      <Version From="9.0" To="9.3" />
     </SBOCompatibility>
   </Validity>
   <Configuration>
